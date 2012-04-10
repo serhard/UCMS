@@ -5,6 +5,7 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
     
     public function indexAction()
     {
+        //deneme
         //$this->_di->doctrineApp->updateDbSchema();
         if ($this->_request->isPost()) {
             $adapter = new UCMS_Zend_Auth_Adapter_Doctrine(
@@ -14,7 +15,7 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
             $adapter->setDi($this->_di);
             
             $sonuc = Zend_Auth::getInstance()->authenticate($adapter);
-            var_dump($sonuc->getCode());die;
+            
             if ($sonuc->getCode() == 1) {
                 $this->_helper->redirector('index', 'index');
             }else{

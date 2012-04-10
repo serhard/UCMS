@@ -27,10 +27,19 @@ class UCMS_Zend_Auth_Adapter_Doctrine implements Zend_Auth_Adapter_Interface
             ->setParameter('password', sha1($this->password))
             ->getArrayResult();
         
-            if (empty($result[0])) {
-                return new Zend_Auth_Result(0, array());
-            }
+        return $result;
+    }
+    
+    public function authenticate() {
+       $result = $this->checkLogin(
+                            $this->username,
+                            $this->password
+               );
+        
+        if (empty($result[0])) {
+            return new Zend_Auth_Result(0, array());
+        }
 
-            return new Zend_Auth_Result(1, $result[0]);
+        return new Zend_Auth_Result(1, $result[0]);
     }
 }
