@@ -1,0 +1,133 @@
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/reset.css')?>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/main.css')?>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/custom-theme/jquery-ui-1.8.1.custom.css')?>" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/css3.css')?>" />
+
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery-1.4.2.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery-ui.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery.wysiwyg.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery.rounded.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/excanvas.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery.visualize.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/script.js')?>"></script>
+</head>
+<body>
+    <div id="bokeh">
+        <div id="container">
+
+            <div id="header">
+                    <?php if (isset($this->layout()->auth) && $this->layout()->auth == false){ ?>
+                    <h1 id="logo">Giriş Ekranı</h1>
+                    <?php }else{ ?>
+                <h1 id="logo">Admin Control Panel </h1>
+                
+                    <div id="header_buttons">
+
+                            <a href="#modal" rel="modal"><img src="images/icons/envelope.png" alt="3 Messages" />3</a>				
+                            <a href="#modal2" rel="modal">modal box test</a>
+                            <a href="#">logout</a>
+                            <a href="#">view website</a>
+
+                    </div><!-- end #header_buttons -->
+                            <!-- Modal box -->
+                            <div id="modal">	
+                                    <div class="modalbox">
+                                            <div class="modalhead">
+                                                    <img src="images/modaltop.png" alt="Modal arrow" />
+                                                    Mailbox
+                                            </div>
+
+                                            <div class="modalcontent">
+                                                    <div class="message">
+                                                            <div class="author"><a href="#">Teun</a></div>
+                                                            <div class="content">This skin can be easily styled!</div>
+                                                            <div class="datetime">16-05 - 08:16</div>
+                                                    </div>
+
+                                                    <div class="message">
+                                                            <div class="author"><a href="#">Pieter</a></div>
+                                                            <div class="content">It can also be styled very easily.</div>
+                                                            <div class="datetime">11-05 - 16:27</div>
+                                                    </div>
+
+                                                    <div class="message">
+                                                            <div class="author"><a href="#">Jane Doe</a></div>
+                                                            <div class="content">This template uses a lot of nice CSS3 effects.</div>
+                                                            <div class="datetime">10-05 - 18:42</div>
+                                                    </div>
+                                            </div>
+
+                                            <div class="modalfoot">
+                                                    <img src="images/icons/newmessage.png" alt="New message" /> New message
+                                            </div>
+                                    </div>
+                            </div>
+
+                            <!-- Modal box 2 -->
+                            <div id="modal2">	
+                                    <div class="modalbox">
+                                            <div class="modalhead">
+                                                    <img src="images/modaltop.png" alt="Modal arrow" />
+                                                    Mailbox 2
+                                            </div>
+
+                                            <div class="modalcontent">
+                                                    <div class="message">
+                                                            <div class="author"><a href="#">Pieter</a></div>
+                                                            <div class="content">It can also be styled very easily.</div>
+                                                            <div class="datetime">11-05 - 16:27</div>
+                                                    </div>
+
+                                                    <div class="message">
+                                                            <div class="author"><a href="#">Jane Doe</a></div>
+                                                            <div class="content">This template uses a lot of nice CSS3 effects.</div>
+                                                            <div class="datetime">10-05 - 18:42</div>
+                                                    </div>
+                                            </div>
+
+                                            <div class="modalfoot">
+                                                    <img src="images/icons/newmessage.png" alt="New message" /> New message
+                                            </div>
+                                    </div>
+                            </div>
+
+                            <!-- Navigation -->
+                            <ul id="main-nav">
+                                    <li>
+                                            <a href="login.html">
+                                                    Dashboard
+                                            </a>
+                                    </li>
+
+                                    <li>
+                                            <a href="#" class="current">
+                                                    Users
+                                            </a>
+
+                                            <ul>
+                                                    <li><a href="#">Permissions</a></li>
+                                                    <li><a href="#" class="current">Manage Users</a></li>
+                                                    <li><a href="#">Manage Usergroups</a></li>
+                                            </ul>
+                                    </li>
+                            </ul><!-- end #nav -->
+                  <?php } ?>
+                    </div><!-- end #header -->
+            <div id="content">
+                    <?php echo $this->layout()->content?>
+            </div>
+        </div><!-- end #bokeh and #container -->
+
+            <div id="footer">
+                    Yönetim Paneli | 2012
+            </div><!-- end #footer -->
+
+    </div>
+</body>
+</html>
