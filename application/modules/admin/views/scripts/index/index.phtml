@@ -1,3 +1,52 @@
-<div id="view-content">
-	<p>Admin layout</p>
-</div>
+<h2><img src="<?php echo $this->baseUrl('/ui/images/icons/home_32.png')?>" alt="Login" />Hoşgeldiniz!</h2>
+
+        <div class="content-box">
+                <div class="content-box-header">
+                        <h3>Hoşgeldiniz!</h3>
+                </div>
+
+                <div class="content-box-content">
+                        <form action="#">
+                                <fieldset>
+                                        <p>
+                                                <label>Username</label>
+                                                <input id="username" type="text" class="small" /><!-- add .align-right to align the input elements to the right -->
+                                                <span class="notification information">This is an informative message.</span>
+                                        </p>
+
+                                        <p>
+                                                <label>Real name</label>
+                                                <input id="real_name" type="text" class="medium" value="Bram Jetten" /><!-- the value-attribute overwrites the <label>Username</label> -->
+                                                <span class="notification success">Success!</span>
+                                        </p>
+
+                                        <p>
+                                                <label>Birthday</label>
+                                                <input id="birthday" type="text" class="small datepicker" />
+                                                <span class="notification error">Error!</span>
+                                                <small>This is a datepicker!</small>
+                                        </p>
+
+                                        <p>
+                                                <label>Select an option</label>
+                                                <select>
+                                                        <option>Choose an option...</option>
+                                                        <option>Option 1</option>
+                                                        <option selected="selected">Option 2</option>
+                                                        <option>Option 3</option>
+                                                </select>
+                                                <span class="notification warning">Warning!</span>
+                                                <small>Just for the sake of adding a dropdown.</small>
+                                        </p>
+
+                                        <p>
+                                                <textarea class="wysiwyg"></textarea>
+                                        </p>
+                                </fieldset>
+
+                                <input type="submit" value="Submit" />
+                        </form>
+                </div>
+        </div>
+
+
