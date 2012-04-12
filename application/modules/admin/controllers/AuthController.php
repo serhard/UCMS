@@ -5,7 +5,7 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
     
     public function indexAction()
     {
-        //deneme
+        //12.04.2012
         //$this->_di->doctrineApp->updateDbSchema();
         if ($this->_request->isPost()) {
             $adapter = new UCMS_Zend_Auth_Adapter_Doctrine(
