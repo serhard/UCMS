@@ -11,7 +11,7 @@ class UCMS_App_Doctrine
     
     public function updateDbSchema()
     {
-        $classes = array('User');
+        $classes = array('User', 'Post', 'Language');
         $metadata = array();
         
         foreach ($classes as $class) {

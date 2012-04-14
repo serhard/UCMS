@@ -26,11 +26,6 @@ class User
      * @ORM\Column(type = "string", length=100)
      */
     protected $password;
-
-    /**
-     * @ORM\Column(type = "datetime")
-     */
-    protected $lastLogin;
     
     /**
      *
@@ -60,14 +55,6 @@ class User
 
     public function setPassword($password) {
         $this->password = $password;
-    }
-
-    public function getLastLogin() {
-        return $this->lastLogin;
-    }
-
-    public function setLastLogin($lastLogin) {
-        $this->lastLogin = $lastLogin;
     }
 
     public function getRole() {
