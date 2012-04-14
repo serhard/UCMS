@@ -1,0 +1,38 @@
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <?php echo $this->headTitle('Giriş')?>
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/reset.css')?>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/main.css')?>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/custom-theme/jquery-ui-1.8.1.custom.css')?>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl('/ui/css/css3.css')?>" />
+    
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery-1.4.2.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery-ui.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery.wysiwyg.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery.rounded.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/excanvas.js')?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/jquery.visualize.js')?>"></script>
+    <script type="text/javascript">
+        baseUrl = "<?php echo $this->baseUrl('/ui/images/icons/calendar.png')?>";
+    </script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/ui/js/script.js')?>"></script>
+</head>
+<body>
+    <div id="bokeh">
+        <div id="container">
+
+            <div id="header">
+                    <h1 id="logo">Giriş Ekranı</h1>
+            </div>
+            <div id="content">
+                    <?php echo $this->layout()->content?>
+            </div>
+        </div>
+        <div id="footer">
+            İçerik Yönetim Sistemi (UCMS) &copy; 2012
+        </div>
+    </div>
+</body>
+</html>
