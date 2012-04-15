@@ -1,34 +1,33 @@
 <?php
 
-class UCMS_Forms_Auth_Login extends Zend_Form
+class UCMS_Form_Auth_Login extends UCMS_Zend_Form
 {
-    public function init() {
+    public function init()
+    {
         $username = new Zend_Form_Element_Text('username');
         $username
-            ->setLabel('Kullanıcı adı')
-            ->setDescription('@gazi.edu.tr')
-            ->addFilter('StringTrim')
+            ->setLabel('Kullanıcı Adı')
             ->setAllowEmpty(false)
             ->addValidator('NotEmpty')
         ;
-    
+        
         $password = new Zend_Form_Element_Password('password');
         $password
             ->setLabel('Parola')
-            ->addFilter('StringTrim')
             ->setAllowEmpty(false)
             ->addValidator('NotEmpty')
         ;
-
-        $submit = new Zend_Form_Element_Submit('submit');
+        
+        $submit = new Zend_Form_Element_Submit('loginSubmit');
         $submit
             ->setLabel('Giriş')
+            ->setAttrib('class', 'btn primary')
         ;
         
         $this->addElements(array(
             $username,
             $password,
             $submit
-        ));        
+        ));
     }
 }

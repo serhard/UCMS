@@ -22,4 +22,5 @@ class UCMS_App_Doctrine
         
         $schemaTool->updateSchema($metadata);
     }
+    
 }

@@ -10,11 +10,12 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
     public function indexAction()
     {
         //$this->_di->doctrineApp->updateDbSchema();
+        $form = new UCMS_Form_Auth_Login();
         
-        if ($this->_request->isPost()) {
+        if ($this->_request->isPost() && $form->isValid($this->_request->getPost())) {
             $adapter = new UCMS_Zend_Auth_Adapter_Doctrine(
-                    $this->_request->getParam('username'),
-                    $this->_request->getParam('password')
+                    $form->getValue('username'),
+                    $form->getValue('password')
             );
             $adapter->setDi($this->_di);
             
