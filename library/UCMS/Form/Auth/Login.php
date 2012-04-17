@@ -18,10 +18,9 @@ class UCMS_Form_Auth_Login extends UCMS_Zend_Form
             ->addValidator('NotEmpty')
         ;
         
-        $submit = new Zend_Form_Element_Submit('loginSubmit');
+        $submit = new Zend_Form_Element_Submit('login');
         $submit
             ->setLabel('Giriş')
-            ->setAttrib('class', 'btn primary')
         ;
         
         $this->addElements(array(

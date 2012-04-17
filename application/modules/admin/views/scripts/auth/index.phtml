@@ -4,25 +4,13 @@
                 <div class="content-box-header">
                         <h3>Giriş</h3>
                 </div>
-
+            
                 <div class="content-box-content">
                     <?php if (isset($this->auth) && $this->auth == false){ ?>
                     <div class="notification information">Kullanıcı adınız veya Parolanız hatalı.</div>
-                    <?php } ?>
-                    
-                    <form action="<?php echo $this->baseUrl('/admin/auth')?>" method="post">
-                            <p>
-                                    <label>Kullanıcı Adı</label>
-                                    <input id="username" type="text" name="username"/>
-                            </p>
-
-                            <p>
-                                    <label>Parola</label>
-                                    <input id="password" type="password" name="password"/>
-                            </p>
-
-                            <input type="submit" value="Giriş" />
-                    </form>
+                    <?php } 
+                    echo $this->form;
+                    ?>
                 </div>
         </div>
 

@@ -13,3 +13,13 @@ $container->setDefinition(
         )
     )
 );
+
+$container->setDefinition(
+    'ucmsAppAuth',
+    new Definition(
+        'UCMS_App_Authentication',
+        array(
+            new Reference('service_container')
+        )
+    )
+);

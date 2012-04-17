@@ -12,8 +12,14 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
         //$this->_di->doctrineApp->updateDbSchema();
         $form = new UCMS_Form_Auth_Login();
         
+        $authAdapter = $this->_di->ucmsAppAuth;
+        
         if ($this->_request->isPost() && $form->isValid($this->_request->getPost())) {
-            $adapter = new UCMS_Zend_Auth_Adapter_Doctrine(
+            $adapter = $authAdapter->userAuthentication(
+                    $form->getValue('username'),
+                    $form->getValue('password')
+            );
+           $adapter = new UCMS_Zend_Auth_Adapter_Doctrine(
                     $form->getValue('username'),
                     $form->getValue('password')
             );
@@ -27,6 +33,8 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
                 $this->view->auth = false;
             }
         }
+        $this->view->form = $form;
+                
         //$this->_helper->layout()->auth = false;
     }
 
