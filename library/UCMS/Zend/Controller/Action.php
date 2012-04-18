@@ -10,6 +10,5 @@ class UCMS_Zend_Controller_Action extends Zend_Controller_Action
         if (!Zend_Auth::getInstance()->hasIdentity() && $this->_request->getControllerName() !== 'auth' ) {
             $this->_helper->redirector->gotoSimple('index', 'auth');
         }
-        
     }
 }

@@ -19,22 +19,16 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
                     $form->getValue('username'),
                     $form->getValue('password')
             );
-           $adapter = new UCMS_Zend_Auth_Adapter_Doctrine(
-                    $form->getValue('username'),
-                    $form->getValue('password')
-            );
-            $adapter->setDi($this->_di);
             
-            $sonuc = Zend_Auth::getInstance()->authenticate($adapter);
-            
-            if ($sonuc->getCode() == Zend_Auth_Result::SUCCESS) {
+            if ($adapter->getCode() == Zend_Auth_Result::SUCCESS) {
                 $this->_helper->redirector('index', 'index');
             }else{
+                var_dump($adapter);
                 $this->view->auth = false;
             }
         }
         $this->view->form = $form;
-                
+        // Assign variable to layout
         //$this->_helper->layout()->auth = false;
     }
 
