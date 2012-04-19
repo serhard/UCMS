@@ -6,9 +6,11 @@ class UCMS_Zend_Controller_Action extends Zend_Controller_Action
     
     public function init() {
         $this->_di = $this->_helper->dependencyInjection->getContainer();
-        
+
         if (!Zend_Auth::getInstance()->hasIdentity() && $this->_request->getControllerName() !== 'auth' ) {
             $this->_helper->redirector->gotoSimple('index', 'auth');
         }
+        
+        $this->view->loggedInUser = $this->_di->ucmsAppAuth->getLoggedInUser();
     }
 }

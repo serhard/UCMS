@@ -23,7 +23,7 @@ class Admin_AuthController extends UCMS_Zend_Controller_Action
             if ($adapter->getCode() == Zend_Auth_Result::SUCCESS) {
                 $this->_helper->redirector('index', 'index');
             }else{
-                var_dump($adapter);
+                //var_dump($adapter);   // !!!!!!!!!!!!!!!!!!!!!!!    
                 $this->view->auth = false;
             }
         }

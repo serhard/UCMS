@@ -33,7 +33,7 @@
                             <a href="#modal" rel="modal"><img src="<?php echo $this->baseUrl('/ui/images/icons/envelope.png')?>" alt="3 Messages" />3</a>				
                             <a href="#modal2" rel="modal">modal box test</a>
                             <a href="<?php echo $this->baseUrl('/admin/auth/logout')?>">logout</a>
-                            <a href="#">view website</a>
+                            <a href="#"><?php $this->loggedInUser['username']?></a>
 
                     </div>
                           
