@@ -1,55 +1,93 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<title>Travel - About</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('/ui/default/css/style.css')?>" />
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
-	<div id="header">
-		<a href="index.html" class="logo"><img src="<?php echo $this->baseUrl('/ui/default/images/logo.png')?>" alt="" width="274" height="90" /></a>																																								<div class="inner_copy"><a href="http://www.greatdirectories.org/categories/travel-directories/">free travel directories</a><a href="http://www.bestfreetemplates.org/categories/travel/">free travel templates</a></div>
-	    <div>
-			<span>Currency: </span>
-			<select id="select">
-				<option>US Dollar</option>
-				<option>Euro</option>
-			</select>
-		  <span>Languages: </span>
-		  <a href="#"><img src="<?php echo $this->baseUrl('/ui/default/images/l1.gif')?>" alt="" width="19" height="11" /></a>
-		  <a href="#"><img src="<?php echo $this->baseUrl('/ui/default/images/l2.gif')?>" alt="" width="19" height="11" /></a>
-		  <a href="#"><img src="<?php echo $this->baseUrl('/ui/default/images/l3.gif')?>" alt="" width="19" height="11" class="active" /></a>
-		  <a href="#"><img src="<?php echo $this->baseUrl('/ui/default/images/l4.gif')?>" alt="" width="19" height="11" /></a>
-		  <a href="#"><img src="<?php echo $this->baseUrl('/ui/default/images/l5.gif')?>" alt="" width="19" height="11" /></a>
-		  <span id="account"><a href="#">My Account</a> | <a href="#">Shopping cart</a></span>																																																																		<div class="inner_copy"><a href="http://www.bestfreetemplates.info/">free website templates</a><a href="http://www.beautifullife.info/">luxury lifestyle</a></div>
-		</div>
-		<ul id="menu">
-			<li><a href="#">Home Page</a></li>
-			<li><a href="#">About Company</a></li>
-			<li><a href="#">Hot Tours</a></li>
-			<li><a href="#">Hotels</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Reviews</a></li>
-			<li><a href="#">Partners</a></li>
-			<li><a href="#">Contact us</a></li>																																																																							<div class="inner_copy"><a href="http://www.bestfreetemplates.org/">free templates</a><a href="http://www.bannermoz.com/">banner templates</a></div>
-		</ul>
-	</div>
-	<div id="content">
-            <?php echo $this->layout()->content; ?>
-	</div>
-	<div id="footer">
-		<ul>
-			<li><a href="#">Home Page</a> |</li>
-			<li><a href="#">About Company</a> |</li>
-			<li><a href="#">Hot Tours</a> |</li>
-			<li><a href="#">Hotels</a> |</li>
-			<li><a href="#">Services</a> |</li>
-			<li><a href="#">Reviews</a> |</li>
-			<li><a href="#">Partners</a> |</li>
-			<li><a href="#">Contact us</a></li>
-		</ul>
-		<p>Copyright &copy;</p>																																																			<div class="inner_copy"><a href="http://www.greatdirectories.org/offer.html">buy links with high pr</a><a href="http://www.bestfreetemplates.org/">free website templates</a></div>
-	</div>
-</body>
+    <!-- Le styles -->
+    <link href="/ui/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/ui/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/ui/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ui/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ui/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ui/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ui/assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+            <?php echo $this->layout()->content ?>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/ui/assets/js/jquery.js"></script>
+    <script src="/ui/assets/js/bootstrap-transition.js"></script>
+    <script src="/ui/assets/js/bootstrap-alert.js"></script>
+    <script src="/ui/assets/js/bootstrap-modal.js"></script>
+    <script src="/ui/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/ui/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/ui/assets/js/bootstrap-tab.js"></script>
+    <script src="/ui/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/ui/assets/js/bootstrap-popover.js"></script>
+    <script src="/ui/assets/js/bootstrap-button.js"></script>
+    <script src="/ui/assets/js/bootstrap-collapse.js"></script>
+    <script src="/ui/assets/js/bootstrap-carousel.js"></script>
+    <script src="/ui/assets/js/bootstrap-typeahead.js"></script>
+    <script>
+        $('.carousel').carousel()
+    </script>
+    
+  </body>
 </html>
